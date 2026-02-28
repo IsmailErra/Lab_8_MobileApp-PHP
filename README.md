@@ -22,9 +22,12 @@
 ### Table
 - Création de **Etudiant**  
 - Champs : id, nom, prenom, ville, sexe  
+![Liste](lb8/tablecreation.png)
 
 ### Test
 - Ajout de quelques étudiants  
+![Liste](lb8/insertion.png)
+![Liste](lb8/afterinsertion.png)
 
 
 ## Partie 2 — Web Service PHP
@@ -53,8 +56,10 @@
 - Récupération de la liste des étudiants  
 
 ### Web Services
-- Service **createEtudiant** pour l’ajout (POST)  
-- Service **loadEtudiant** pour la lecture (GET)  
+- Service **createEtudiant** pour l’ajout (POST)
+ 
+- Service **loadEtudiant** pour la lecture (GET)
+
 - Retour des données au format JSON  
 
 ### Test avec Advanced REST Client
@@ -62,7 +67,10 @@
 - Test du service POST d’ajout  
 - Vérification de l’insertion dans phpMyAdmin  
 - Test du service GET de lecture  
-- Validation du format JSON  
+- Validation du format JSON
+  
+![Liste](lb8/post_test.png)
+![Liste](lb8/get_test.png)
 
 ### Remarque
 - Vérification du bon fonctionnement des services avant l’intégration Android
@@ -103,6 +111,9 @@
 - Exécution de l’application sur émulateur/appareil  
 - Ajout d’un étudiant  
 - Vérification de la réponse dans Logcat  
+![Liste](lb8/addinterface.png)
+![Liste](lb8/afteradd.png)
+
 
 ### Challenge (optionnel)
 - Création d’un écran liste des étudiants  
