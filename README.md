@@ -65,4 +65,47 @@
 - Validation du format JSON  
 
 ### Remarque
-- Vérification du bon fonctionnement des services avant l’intégration Android  
+- Vérification du bon fonctionnement des services avant l’intégration Android
+
+## Partie 3 — Application Android (Volley + Gson)
+
+### Création du projet Android
+- Lancement de Android Studio  
+- Création du projet **projetws** (Java, API ≥ 26)  
+- Vérification de la compilation du projet  
+
+### Permission Internet
+- Ajout de la permission Internet dans **AndroidManifest.xml**  
+- Autorisation des requêtes HTTP vers le Web Service  
+
+### Intégration des dépendances
+- Ajout des bibliothèques **Volley** et **Gson**  
+- Synchronisation du projet  
+
+### Activité AddEtudiant
+- Création de l’interface d’ajout d’étudiant  
+- Saisie : nom, prénom, ville, sexe  
+- Bouton d’envoi des données  
+
+### Communication avec le Web Service
+- Envoi d’une requête POST avec Volley  
+- Réception de la réponse JSON  
+- Conversion des données avec Gson  
+- Affichage des résultats dans Logcat  
+
+### Configuration réseau (Android 9+)
+- Autorisation du trafic HTTP local  
+- Ajout du fichier de configuration réseau  
+- Mise à jour du manifest  
+
+### Test de l’application
+- Démarrage de Apache et MySQL  
+- Exécution de l’application sur émulateur/appareil  
+- Ajout d’un étudiant  
+- Vérification de la réponse dans Logcat  
+
+### Challenge (optionnel)
+- Création d’un écran liste des étudiants  
+- Ajout des actions modifier / supprimer  
+- Confirmation avant suppression  
+- Actualisation dynamique de la liste    
