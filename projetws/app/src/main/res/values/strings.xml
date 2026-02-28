@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">projetws</string>
+    <string name="label_nom">Nom</string>
+    <string name="label_prenom">Prénom</string>
+    <string name="label_ville">Ville</string>
+    <string name="label_sexe">Sexe</string>
+    <string name="label_homme">Homme</string>
+    <string name="label_femme">Femme</string>
+    <string name="btn_ajouter">Ajouter</string>
+    <string name="hint_nom">Entrez le nom</string>
+    <string name="hint_prenom">Entrez le prénom</string>
+    <string-array name="villes">
+        <item>Casablanca</item>
+        <item>Rabat</item>
+        <item>Marrakech</item>
+        <item>Agadir</item>
+    </string-array>
+</resources>
