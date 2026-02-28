@@ -2,121 +2,120 @@
 
 ## Objectifs
 
-- Création d’une base MySQL  
-- Développement d’un service PHP  
-- Création d’une application Android  
-- Lecture du JSON avec Gson  
+- Mise en place d’une base MySQL  
+- Création d’un Web Service PHP  
+- Développement d’une application Android  
+- Traitement du JSON avec Gson  
 
 ---
 
 ## Partie 1 — Base MySQL
 
 ### Démarrage
-- Lancement de XAMPP  
-- Activation de Apache et MySQL  
-- Ouverture de phpMyAdmin  
+- Ouverture de XAMPP  
+- Démarrage de Apache et MySQL  
+- Accès à phpMyAdmin  
 
 ### Base de données
-- Création de **school1**
+- Création de la base **school1**
 
 ### Table
-- Création de **Etudiant**  
+- Création de la table **Etudiant**  
 - Champs : id, nom, prenom, ville, sexe  
+
 ![Liste](lb8/tablecreation.png)
 
 ### Test
-- Ajout de quelques étudiants  
+- Insertion de quelques étudiants  
+
 ![Liste](lb8/insertion.png)
 ![Liste](lb8/afterinsertion.png)
 
+---
 
 ## Partie 2 — Web Service PHP
 
 ### Structure du projet
 - Création du projet PHP  
-- Organisation des dossiers : classes, connexion, dao, service, controller, ws  
-- Placement du projet dans **htdocs**
+- Mise en place des dossiers : classes, connexion, dao, service, controller, ws  
+- Déploiement du projet dans **htdocs**
 
 ### Connexion à la base
 - Création de la classe **Connexion (PDO)**  
-- Configuration de l’accès à la base **school1**
+- Liaison avec la base **school1**
 
 ### Classe Etudiant
-- Création de la classe métier **Etudiant**  
-- Définition des attributs : id, nom, prenom, ville, sexe  
-- Ajout des getters nécessaires  
+- Création de la classe **Etudiant**  
+- Définition des champs principaux  
+- Ajout des getters
 
 ### Interface IDao
-- Définition des opérations CRUD  
-- Méthodes principales : create, delete, update, findAll, findById  
+- Déclaration des opérations CRUD  
+- Méthodes : create, delete, update, findAll, findById  
 
 ### Service EtudiantService
-- Implémentation de l’interface **IDao**  
-- Ajout d’un étudiant dans la base  
-- Récupération de la liste des étudiants  
+- Implémentation de **IDao**  
+- Fonction d’ajout d’un étudiant  
+- Fonction de récupération de la liste  
 
 ### Web Services
-- Service **createEtudiant** pour l’ajout (POST)
- 
-- Service **loadEtudiant** pour la lecture (GET)
+- **createEtudiant** : ajout (POST)  
+- **loadEtudiant** : lecture (GET)  
+- Réponse renvoyée en JSON  
 
-- Retour des données au format JSON  
+### Test avec ARC / Postman
+- Installation de l’outil de test  
+- Test du POST (ajout)  
+- Vérification dans phpMyAdmin  
+- Test du GET (lecture)  
+- Validation du JSON  
 
-### Test avec Advanced REST Client
-- Installation de l’outil ARC ou Postman  
-- Test du service POST d’ajout  
-- Vérification de l’insertion dans phpMyAdmin  
-- Test du service GET de lecture  
-- Validation du format JSON
-  
 ![Liste](lb8/post_test.png)
 ![Liste](lb8/get_test.png)
 
 ### Remarque
-- Vérification du bon fonctionnement des services avant l’intégration Android
+- Validation des services avant la partie Android  
+
+---
 
 ## Partie 3 — Application Android (Volley + Gson)
 
 ### Création du projet Android
 - Lancement de Android Studio  
 - Création du projet **projetws** (Java, API ≥ 26)  
-- Vérification de la compilation du projet  
+- Vérification du build  
 
 ### Permission Internet
-- Ajout de la permission Internet dans **AndroidManifest.xml**  
-- Autorisation des requêtes HTTP vers le Web Service  
+- Ajout de la permission Internet  
+- Autorisation des requêtes HTTP  
 
-### Intégration des dépendances
-- Ajout des bibliothèques **Volley** et **Gson**  
+### Dépendances
+- Ajout de **Volley** et **Gson**  
 - Synchronisation du projet  
 
 ### Activité AddEtudiant
-- Création de l’interface d’ajout d’étudiant  
-- Saisie : nom, prénom, ville, sexe  
-- Bouton d’envoi des données  
+- Création de l’interface d’ajout  
+- Saisie des informations étudiant  
+- Bouton d’envoi  
 
 ### Communication avec le Web Service
-- Envoi d’une requête POST avec Volley  
+- Envoi de la requête POST via Volley  
 - Réception de la réponse JSON  
-- Conversion des données avec Gson  
-- Affichage des résultats dans Logcat  
+- Parsing avec Gson  
+- Affichage dans Logcat  
 
 ### Configuration réseau (Android 9+)
 - Autorisation du trafic HTTP local  
-- Ajout du fichier de configuration réseau  
+- Ajout du fichier de sécurité réseau  
 - Mise à jour du manifest  
 
 ### Test de l’application
-- Démarrage de Apache et MySQL  
-- Exécution de l’application sur émulateur/appareil  
+- Démarrage Apache et MySQL  
+- Lancement de l’application  
 - Ajout d’un étudiant  
-- Vérification de la réponse dans Logcat  
+- Vérification dans Logcat  
+
 ![Liste](lb8/addinterface.png)
 ![Liste](lb8/after.png)
 
-
-### Challenge (optionnel)
-- Création d’un écran liste des étudiants  
-- Ajout des actions modifier / supprimer  
-- Confirmation avant suppression  
-- Actualisation dynamique de la liste    
+---
