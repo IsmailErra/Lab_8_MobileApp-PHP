@@ -112,7 +112,7 @@
 - Ajout d’un étudiant  
 - Vérification de la réponse dans Logcat  
 ![Liste](lb8/addinterface.png)
-![Liste](lb8/afteradd.png)
+![Liste](lb8/after.png)
 
 
 ### Challenge (optionnel)
